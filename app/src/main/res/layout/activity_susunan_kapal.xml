@@ -19,4 +19,25 @@
         android:columnCount="4"
         android:paddingTop="16dp" />
 
+    <TextView
+        android:text="DATA MUATAN KAPAL"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/tableData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="@drawable/bg_table_border"/>
+    </HorizontalScrollView>
+
 </LinearLayout>
