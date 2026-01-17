@@ -1,176 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:background="@drawable/bg_bottom_sheet"> <View
-    android:layout_width="40dp"
-    android:layout_height="4dp"
-    android:layout_gravity="center"
-    android:background="#E2E8F0"
-    android:layout_marginBottom="20dp"/>
-
+    android:padding="20dp"
+    android:background="#FFFFFF">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Konfigurasi Kapasitas"
-        android:textSize="18sp"
+        android:text="KONFIGURASI TOTAL"
         android:textStyle="bold"
-        android:textColor="#1E293B"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Input kapasitas maksimal kapal dan beban masing-masing kendaraan."
-        android:textSize="13sp"
-        android:textColor="#64748B"
-        android:layout_marginBottom="24dp"/>
+    <EditText android:id="@+id/etKapasitasPopup" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Total Kapasitas Kapal" android:inputType="number" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nama Kapal"
-        android:layout_marginBottom="12dp"
-        app:boxCornerRadiusTopStart="12dp"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusTopEnd="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNamaKapal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DDDDDD" android:layout_marginVertical="10dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tanggal (dd-MM-yyyy)"
-        android:layout_marginBottom="12dp"
-        app:boxCornerRadiusTopStart="12dp"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusTopEnd="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etTanggal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Kapasitas Maksimal Kapal"
-        android:layout_marginBottom="12dp"
-        app:boxCornerRadiusTopStart="12dp"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusTopEnd="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etKapasitasPopup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Beban Mobil"
-            android:layout_marginEnd="8dp"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSlotMobilPopup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Beban Truk"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSlotTrukPopup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <EditText android:id="@+id/etHargaMotorPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Harga Motor" android:inputType="number" />
+        <EditText android:id="@+id/etSlotMotorPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Beban Motor" android:inputType="number" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Harga Mobil"
-            android:layout_marginEnd="8dp"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etHargaMobil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Harga Truk"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etHargaTruk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <EditText android:id="@+id/etHargaMobilPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Harga Mobil" android:inputType="number" />
+        <EditText android:id="@+id/etSlotMobilPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Beban Mobil" android:inputType="number" />
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <EditText android:id="@+id/etHargaTrukPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Harga Truk" android:inputType="number" />
+        <EditText android:id="@+id/etSlotTrukPopup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Beban Truk" android:inputType="number" />
+    </LinearLayout>
+
+    <Button
         android:id="@+id/btnSimpanKonfigurasi"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="24dp"
-        android:text="Simpan Konfigurasi"
-        android:textAllCaps="false"
-        android:backgroundTint="#1E293B"
-        app:cornerRadius="12dp" />
-
+        android:layout_height="wrap_content"
+        android:text="SIMPAN SEMUA PERUBAHAN"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#1E293B"/>
 </LinearLayout>

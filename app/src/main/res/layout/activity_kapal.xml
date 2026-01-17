@@ -3,48 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDF2F7"> <com.google.android.material.appbar.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFFFFF"
-    app:elevation="2dp">
-    <androidx.appcompat.widget.Toolbar
+    android:background="#EDF2F7">
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical">
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/kapal"
-                android:contentDescription="Logo"
-                app:tint="#1E293B" />
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="2dp">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:orientation="vertical">
-                <TextView
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/kapal"
+                    android:contentDescription="Logo"
+                    app:tint="#1E293B" />
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cargo Monitor"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#1E293B"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ship Fleet Management"
-                    android:textSize="12sp"
-                    android:textColor="#64748B"/>
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvNamaKapal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cargo Monitor"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E293B"/>
+                    <TextView
+                        android:id="@+id/tvTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ship Fleet Management"
+                        android:textSize="12sp"
+                        android:textColor="#64748B"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
-</com.google.android.material.appbar.AppBarLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -70,25 +74,25 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:layout_marginEnd="8dp">
+                    android:layout_marginEnd="6dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp"
+                        android:padding="12dp"
                         android:gravity="center">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Total"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:textColor="#64748B"/>
                         <TextView
                             android:id="@+id/tvTotalKapasitas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100"
-                            android:textSize="22sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="#1E293B"/>
                     </LinearLayout>
@@ -100,25 +104,25 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:layout_marginEnd="8dp">
+                    android:layout_marginEnd="6dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp"
+                        android:padding="12dp"
                         android:gravity="center">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Terpakai"
-                            android:textSize="12sp"
+                            android:text="Pakai"
+                            android:textSize="10sp"
                             android:textColor="#3B82F6"/>
                         <TextView
                             android:id="@+id/tvJumlah"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10"
-                            android:textSize="22sp"
+                            android:text="0"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="#2563EB"/>
                     </LinearLayout>
@@ -129,27 +133,57 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="4dp"
+                    android:layout_marginEnd="6dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp"
+                        android:padding="12dp"
                         android:gravity="center">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tersisa"
-                            android:textSize="12sp"
+                            android:text="Sisa"
+                            android:textSize="10sp"
                             android:textColor="#10B981"/>
                         <TextView
                             android:id="@+id/tvSisaKapasitas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="90"
-                            android:textSize="22sp"
+                            android:text="100"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="#059669"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pendapatan"
+                            android:textSize="10sp"
+                            android:textColor="#F59E0B"/>
+                        <TextView
+                            android:id="@+id/tvTotalPendapatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#D97706"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -181,7 +215,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="90 Unit Tersedia"
+                            android:text="100 Unit Tersedia"
                             android:textSize="11sp"
                             android:textStyle="bold"
                             android:textColor="#10B981"/>
@@ -192,7 +226,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp"
                         android:progressDrawable="@drawable/custom_progress_bar"
-                        android:progress="10" />
+                        android:progress="0" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -206,6 +240,7 @@
                 android:layout_marginBottom="12dp"/>
 
             <LinearLayout
+                android:id="@+id/gridKapal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -215,7 +250,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnMotor"
                     android:layout_width="0dp"
-                    android:layout_height="85dp"
+                    android:layout_height="95dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="8dp"
                     android:text="Motor +"
@@ -224,14 +259,14 @@
                     android:textStyle="bold"
                     android:background="#10B981"
                     android:drawableTop="@drawable/ic_motor"
-                    android:paddingTop="12dp"
-                    android:drawablePadding="4dp"
+                    android:paddingTop="16dp"
+                    android:drawablePadding="8dp"
                     android:elevation="4dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnMobil"
                     android:layout_width="0dp"
-                    android:layout_height="85dp"
+                    android:layout_height="95dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="8dp"
                     android:text="Mobil +"
@@ -240,14 +275,14 @@
                     android:textStyle="bold"
                     android:background="#3B82F6"
                     android:drawableTop="@drawable/ic_mobil"
-                    android:paddingTop="12dp"
-                    android:drawablePadding="4dp"
+                    android:paddingTop="16dp"
+                    android:drawablePadding="8dp"
                     android:elevation="4dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnTruk"
                     android:layout_width="0dp"
-                    android:layout_height="85dp"
+                    android:layout_height="95dp"
                     android:layout_weight="1"
                     android:text="Truk +"
                     android:textAllCaps="false"
@@ -255,15 +290,16 @@
                     android:textStyle="bold"
                     android:background="#F59E0B"
                     android:drawableTop="@drawable/ic_truk"
-                    android:paddingTop="12dp"
-                    android:drawablePadding="4dp"
+                    android:paddingTop="16dp"
+                    android:drawablePadding="8dp"
                     android:elevation="4dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp">
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSetKapasitas"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -284,6 +320,64 @@
                     android:backgroundTint="#1E293B"
                     app:cornerRadius="12dp"/>
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="DAFTAR KENDARAAN"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#64748B"/>
+
+                <ImageButton
+                    android:id="@+id/btnModeEdit"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_obeng"
+                    app:tint="#64748B"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#F8FAFC"
+                        android:padding="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="JENIS" android:textSize="10sp" android:textStyle="bold" android:textColor="#64748B"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="WAKTU" android:textSize="10sp" android:textStyle="bold" android:textColor="#64748B" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="TARIF" android:textSize="10sp" android:textStyle="bold" android:textColor="#64748B" android:textAlignment="viewEnd"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tableData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:minHeight="120dp"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
